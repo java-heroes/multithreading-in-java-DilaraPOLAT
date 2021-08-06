@@ -1,17 +1,21 @@
 
-*MULTHİTHREADİNG NEDİR?
-Çoklu iş parçacığı, bir işlem içinde birden çok iş parçacığının oluşturulmasına izin veren, bağımsız olarak yürütülen ancak aynı anda işlem kaynaklarını paylaşan bir program yürütme modelidir. Donanıma bağlı olarak, iş parçacıkları kendi CPU çekirdeğine dağıtılırsa tamamen paralel çalışabilir.
+*MULTHÄ°THREADÄ°NG NEDÄ°R?
 
-*MULTHİTHREADİNG NERDE (HANGİ DURUMLARDA) KULLANILIR? 
-Pek çoğumuz bilgisayarı açtığımız zaman aynı anda birkaç uygulamayı başlatırız. Örneğin kod yazarken bir yandan internette birşeyler arar bir yandan müzik dinler bir yandan da gelen maillerimizi kontrol ederiz. Bütün bunlar aynı anda olur yada bize öyle oluyormuş gibi gelir. İşte bu olaya multitasking denilir, yani eş zamanlı görevler.
+Ã‡oklu iÅŸ parÃ§acÄ±ÄŸÄ±, bir iÅŸlem iÃ§inde birden Ã§ok iÅŸ parÃ§acÄ±ÄŸÄ±nÄ±n oluÅŸturulmasÄ±na izin veren, baÄŸÄ±msÄ±z olarak yÃ¼rÃ¼tÃ¼len ancak aynÄ± anda iÅŸlem kaynaklarÄ±nÄ± paylaÅŸan bir program yÃ¼rÃ¼tme modelidir. DonanÄ±ma baÄŸlÄ± olarak, iÅŸ parÃ§acÄ±klarÄ± kendi CPU Ã§ekirdeÄŸine daÄŸÄ±tÄ±lÄ±rsa tamamen paralel Ã§alÄ±ÅŸabilir.
 
-*Multi Thread Çalışmanın Avantaj & Dezavantajları
-Öncelikle Multi Thread çalışmanın avantajlarını ele almak gerekirse bunlar arasından en gözde olanı asenkron yaklaşım diye nitelendirdiğimiz uygulama içerisinde görevlerin paralel bir şekilde, beklemeksizin gerçekleştirilebiliyor olmasıdır. Bunun yanında, Multi Thread bir uygulamada threadlardan birinin harap olması diğerlerini etkilemez ve uygulama diğer kanallardan normal çalışmaya devam eder.
+*MULTHÄ°THREADÄ°NG NERDE (HANGÄ° DURUMLARDA) KULLANILIR?
 
-Elle tutulur tek olumsuz yanı tek mikro işlemciye sahip sistemlerde performans kaybıdır. Nihayetinde aynı anda çalışan thread sayısı ile her bir threadın çalıştırılma miktarı arasında ters bir ortantı söz konusudur.
-*Özet
-Her bir process en az bir tane thread içermek zorundadır, bu threade main thread denilir. main thread gerekli durumda başka threadleri de yaratabilir.
-Java’da multithread kavramı Thread sınıfı ve Runnable interface üzerine kurulmuştur. Yeni bir thread yaratmak ve ona bir görev atamak için bu iki sınıfı kullanabiliriz; birinci yöntemde doğrudan Thread sınıfını extend edip run metodunu override edebiliriz, böylece yeni bir thread sınıfı yaratmış oluruz ve onun objelerini yaratarak doğrudan thread yaratma ve çalıştırma imkanına sahip oluruz. İkinci yöntemde ise Runnable sınıfını implemente eder ve run metodunu override ederek yeni bir task oluştururuz ve bu oluşturduğumuz taskı bir thread objesine verip çalıştırmasını isteriz. 
+Pek Ã§oÄŸumuz bilgisayarÄ± aÃ§tÄ±ÄŸÄ±mÄ±z zaman aynÄ± anda birkaÃ§ uygulamayÄ± baÅŸlatÄ±rÄ±z. Ã–rneÄŸin kod yazarken bir yandan internette birÅŸeyler arar bir yandan mÃ¼zik dinler bir yandan da gelen maillerimizi kontrol ederiz. BÃ¼tÃ¼n bunlar aynÄ± anda olur yada bize Ã¶yle oluyormuÅŸ gibi gelir. Ä°ÅŸte bu olaya multitasking denilir, yani eÅŸ zamanlÄ± gÃ¶revler.
+
+*Multi Thread Ã‡alÄ±ÅŸmanÄ±n Avantaj & DezavantajlarÄ±
+
+Ã–ncelikle Multi Thread Ã§alÄ±ÅŸmanÄ±n avantajlarÄ±nÄ± ele almak gerekirse bunlar arasÄ±ndan en gÃ¶zde olanÄ± asenkron yaklaÅŸÄ±m diye nitelendirdiÄŸimiz uygulama iÃ§erisinde gÃ¶revlerin paralel bir ÅŸekilde, beklemeksizin gerÃ§ekleÅŸtirilebiliyor olmasÄ±dÄ±r. Bunun yanÄ±nda, Multi Thread bir uygulamada threadlardan birinin harap olmasÄ± diÄŸerlerini etkilemez ve uygulama diÄŸer kanallardan normal Ã§alÄ±ÅŸmaya devam eder.
+
+Elle tutulur tek olumsuz yanÄ± tek mikro iÅŸlemciye sahip sistemlerde performans kaybÄ±dÄ±r. Nihayetinde aynÄ± anda Ã§alÄ±ÅŸan thread sayÄ±sÄ± ile her bir threadÄ±n Ã§alÄ±ÅŸtÄ±rÄ±lma miktarÄ± arasÄ±nda ters bir ortantÄ± sÃ¶z konusudur.
+*Ã–zet
+Her bir process en az bir tane thread iÃ§ermek zorundadÄ±r, bu threade main thread denilir. main thread gerekli durumda baÅŸka threadleri de yaratabilir.
+Javaâ€™da multithread kavramÄ± Thread sÄ±nÄ±fÄ± ve Runnable interface Ã¼zerine kurulmuÅŸtur. Yeni bir thread yaratmak ve ona bir gÃ¶rev atamak iÃ§in bu iki sÄ±nÄ±fÄ± kullanabiliriz; birinci yÃ¶ntemde doÄŸrudan Thread sÄ±nÄ±fÄ±nÄ± extend edip run metodunu override edebiliriz, bÃ¶ylece yeni bir thread sÄ±nÄ±fÄ± yaratmÄ±ÅŸ oluruz ve onun objelerini yaratarak doÄŸrudan thread yaratma ve Ã§alÄ±ÅŸtÄ±rma imkanÄ±na sahip oluruz. Ä°kinci yÃ¶ntemde ise Runnable sÄ±nÄ±fÄ±nÄ± implemente eder ve run metodunu override ederek yeni bir task oluÅŸtururuz ve bu oluÅŸturduÄŸumuz taskÄ± bir thread objesine verip Ã§alÄ±ÅŸtÄ±rmasÄ±nÄ± isteriz. 
+
 *Kaynaklar
 https://totalview.io/blog/multithreading-multithreaded-applications#:~:text=Multithreading%20is%20a%20model%20of,to%20their%20own%20CPU%20core.
 https://www.gencayyildiz.com/blog/multi-thread-calismanin-avantaj-ve-dezavantajlari/
